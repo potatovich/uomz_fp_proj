@@ -1,7 +1,7 @@
 import os
 import codecs
 
-def get_paths():
+def get_paths(): #Метод для получения путей до всех файловс данными
     paths = []
 
     for folders, _, files in os.walk('databases'):
@@ -15,7 +15,7 @@ def get_paths():
                                             '.atr-' in p.split('\\')[2], 
                                             paths))]
 
-def get_sym_labels_and_descriptions():
+def get_sym_labels_and_descriptions(): #Метод для получения всех доступных аннотаций(значков и описания)
 
     file = codecs.open('sym_label.txt', 'r', 'utf-8')
     labels = file.readlines()
